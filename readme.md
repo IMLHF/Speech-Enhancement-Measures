@@ -63,7 +63,7 @@ USAGE
 
 ---------------------------------------------------------------------------
 
-### REFERENCES:
+## REFERENCES:
 
 [1] Hansen, J. and Pellom, B. (1998). An effective quality evaluation
 	protocol for speech enhancement algorithms. Inter. Conf. on Spoken 
