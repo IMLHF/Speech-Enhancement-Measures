@@ -45,7 +45,7 @@ This folder contains implementations of objective quality measures
     fwSNRseg = comp_fwseg(cleanFile.wav, enhancedFile.wav);
 
     [SIG,BAK,OVL]=comp_fwseg_variant(cleanFile.wav, enhancedFile.wav);
-	    where   'SIG' is the predicted rating of speech distortion,
+	    where 'SIG' is the predicted rating of speech distortion,
 		'BAK' is the predicted rating of background noise distortion,
 		'OVL' is the predicted rating of overall quality.
 
@@ -55,7 +55,7 @@ This folder contains implementations of objective quality measures
 	    Only sampling frequencies of 8000 Hz or 16000 Hz are supported.
 
     [Csig,Cbak,Covl]=composite(cleanFile.wav, enhancedFile.wav);
-		where   'Csig' is the predicted rating of speech distortion,
+		where 'Csig' is the predicted rating of speech distortion,
 		'Cbak' is the predicted rating of background noise distortion,
 		'Covl' is the predicted rating of overall quality.
 
