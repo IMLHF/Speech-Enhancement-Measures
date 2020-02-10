@@ -28,9 +28,10 @@ This folder contains implementations of objective quality measures
 			based on active speech level.                           [9]
 
 ---------------------------------------------------------------------------------
-USAGE
+## USAGE
 
 >>   [snr_mean, segsnr_mean]= compSNR(cleanFile.wav, enhdFile.wav);
+
       	where 'snr_mean' is the global overall SNR and 'segsnr_mean' is the 
       	segmental SNR.
 
