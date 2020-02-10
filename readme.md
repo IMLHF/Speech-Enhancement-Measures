@@ -30,7 +30,7 @@ This folder contains implementations of objective quality measures
 ---------------------------------------------------------------------------------
 ## USAGE
 
->>   [snr_mean, segsnr_mean]= compSNR(cleanFile.wav, enhdFile.wav);
+	   [snr_mean, segsnr_mean]= compSNR(cleanFile.wav, enhdFile.wav);
 
       	where 'snr_mean' is the global overall SNR and 'segsnr_mean' is the 
       	segmental SNR.
