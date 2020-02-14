@@ -1,4 +1,4 @@
-function [ scores ] = pesq( ref_wav, deg_wav )
+function [ scores ] = comp_pesq( ref_wav, deg_wav )
 
 % ----------------------------------------------------------------------
 %            PESQ objective speech quality measure
@@ -9,7 +9,7 @@ function [ scores ] = pesq( ref_wav, deg_wav )
 %   wideband speech [3].
 %
 %
-%   Usage:  scores = pesq( cleanFile, enhancedFile )
+%   Usage:  scores = comp_pesq( cleanFile, enhancedFile )
 %           
 %         cleanFile     - clean input file in .wav format sampled at 
 %                         sampling frequency Fs=8 kHz or Fs=16 kHz
@@ -25,7 +25,7 @@ function [ scores ] = pesq( ref_wav, deg_wav )
 %                         For wideband speech, only the MOS-mapped value
 %                         is returned [3].
 %
-%  Example call:  scores = pesq('sp04.wav', 'enhanced.wav')
+%  Example call:  scores = comp_pesq('sp04.wav', 'enhanced.wav')
 %
 %  
 %  References:
@@ -50,7 +50,7 @@ function [ scores ] = pesq( ref_wav, deg_wav )
 % $Revision: 2.0 $  $Date: 5/14/2012 $
 % ----------------------------------------------------------------------
 
-    if nargin ==0, fprintf('Usage: pesq( ref_wav, deg_wav )\n');
+    if nargin ==0, fprintf('Usage: comp_pesq( ref_wav, deg_wav )\n');
                    fprintf('       ref_wav = reference input filename\n');
                    fprintf('       deg_wav = degraded output filename\n\n');
                    fprintf('For more help, type: help pesq\n\n'); 

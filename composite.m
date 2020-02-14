@@ -81,7 +81,7 @@ segSNR= mean( segsnr_dist);
 % end
 
      
- [pesq_mos_scores]= pesq(cleanFile, enhancedFile);
+ [pesq_mos_scores]= comp_pesq(cleanFile, enhancedFile);
  
  if length(pesq_mos_scores)==2
      pesq_mos=pesq_mos_scores(1); % take the raw PESQ value instead of the
@@ -101,7 +101,7 @@ Cbak = 1.634 + 0.478 *pesq_mos - 0.007*wss_dist + 0.063*segSNR;
 Covl = 1.594 + 0.805*pesq_mos - 0.512*llr_mean - 0.007*wss_dist;
   Covl = max(1, Covl); Covl=min(5, Covl); % limit values to [1, 5]
 
-fprintf('\n LLR=%f   SNRseg=%f   WSS=%f   PESQ=%f\n',llr_mean,segSNR,wss_dist,pesq_mos);
+%fprintf('\n LLR=%f   SNRseg=%f   WSS=%f   PESQ=%f\n',llr_mean,segSNR,wss_dist,pesq_mos);
 
 return; %=================================================================
 

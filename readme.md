@@ -18,7 +18,7 @@ This folder contains implementations of objective quality measures
 	comp_fwseg_mars	    Frequency variant fwSNRseg measure 		Chap 11
 			    based on MARS analysis				 									
 
-	pesq.m		PESQ measure (narrowband)   ITU-T P.862             [6]
+	comp_pesq.m		PESQ measure (narrowband)   ITU-T P.862             [6]
                 PESQ measure (wideband)     ITU-T P.862.2           [7]
 
 	composite.m	A composite measure                                 [8]
@@ -50,7 +50,7 @@ This folder contains implementations of objective quality measures
 
     [SIG,BAK,OVL] = comp_fwseg_mars(cleanFile.wav, enhancedFile.wav);
 
-    pesq_val = pesq(cleanFile.wav, enhancedFile.wav);
+    pesq_val = comp_pesq(cleanFile.wav, enhancedFile.wav);
 	% Only sampling frequencies of 8000 Hz or 16000 Hz are supported.
 
     [Csig,Cbak,Covl] = composite(cleanFile.wav, enhancedFile.wav);
