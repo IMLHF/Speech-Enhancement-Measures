@@ -17,7 +17,7 @@ function [Csig, Cbak, Cvol, pesq, SNR, SegSNR] = evaluate_all(ref_dir, deg_dir)
     cvols = zeros(1, n_refs);
     pesqs = zeros(1, n_refs);
     snrs = zeros(1, n_refs);
-    segsnrs = zeros(n_refs);
+    segsnrs = zeros(1,n_refs);
     for idx = 1:n_refs
         ref_names(idx) = strcat(ref_dir, '/', ref_names(idx));
         deg_names(idx) = strcat(deg_dir, '/', deg_names(idx));
@@ -35,7 +35,7 @@ function [Csig, Cbak, Cvol, pesq, SNR, SegSNR] = evaluate_all(ref_dir, deg_dir)
         snrs(idx) = snr;
         segsnrs(idx) = segsnr;
         % disp(strcat(ref_names(idx),'\n'))
-        fprintf('\n idx=%d  csig=%f   cbak=%f   cvol=%f    ssnr=%f\n',idx,csig,cbak,cvol,segsnr);
+        fprintf('\n idx=%d  csig=%f  cbak=%f  cvol=%f  pesq=%f   snr=%f   ssnr=%f\n',idx,csig,cbak,cvol,pesq_(1),snr,segsnr);
     end;
 
     Csig = mean(csigs);
