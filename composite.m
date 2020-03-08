@@ -43,8 +43,14 @@ alpha= 0.95;
 
 [data1, Srate1, Nbits1]= wavread(cleanFile);
 [data2, Srate2, Nbits2]= wavread(enhancedFile);
-if ( Srate1~= Srate2) | ( Nbits1~= Nbits2)
-    error( 'The two files do not match!\n');
+if ( Srate1~= Srate2) | ( Nbits1~= Nbits2) | length(data1)~=length(data2)
+   disp(Srate1);
+   disp(Srate2);
+   disp(Nbits1);
+   disp(Nbits2);
+   disp(length(data1));
+   disp(length(data2));
+   error( 'The two files do not match!\n');
 end
 
 len= min( length( data1), length( data2));
