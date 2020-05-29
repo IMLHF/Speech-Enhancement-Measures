@@ -1,4 +1,5 @@
 % get CSIG, CBAK, CVOL, PESQ, SegSNR from two dir list
+% [CSIG, CBAK, CVOL, PESQ, SegSNR] = evaluate_all(ref_dir, deg_dir)
 
 function [Csig, Cbak, Cvol, pesq, SNR, SegSNR] = evaluate_all(ref_dir, deg_dir)
     ref_folder = dir(fullfile(ref_dir,'*.wav'));
