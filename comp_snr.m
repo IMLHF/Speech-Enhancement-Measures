@@ -45,13 +45,15 @@ end
 
 [data1, Srate1, Nbits1]= wavread(cleanFile);
 [data2, Srate2, Nbits2]= wavread(enhdFile);
-if (( Srate1~= Srate2) | ( Nbits1~= Nbits2))
+if (( Srate1~= Srate2) | ( Nbits1~= Nbits2) | ( length( data1)~= length( data2)))
     error( 'The two files do not match!\n');
 end
   
-len= min( length( data1), length( data2));
-data1= data1( 1: len);
-data2= data2( 1: len);
+% len= min( length( data1), length( data2));
+% data1= data1( 1: len);
+% data2= data2( 1: len);
+% data1= (data1 - mean(data1))/std(data1); % MVN
+% data2= (data2 - mean(data2))/std(data2);
 
 [snr_dist, segsnr_dist]= snr( data1, data2,Srate1);
 
